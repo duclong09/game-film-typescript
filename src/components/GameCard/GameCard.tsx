@@ -34,7 +34,7 @@ export const GameCard: React.FC<GameCardProps> = ({ content }) => {
         );
         break;
       default:
-        console.log(`Sorry, we are out of ${icon}.`);
+        console.log("message not loaded api game platform");
         break;
     }
     return icon;

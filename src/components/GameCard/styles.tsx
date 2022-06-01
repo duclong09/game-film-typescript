@@ -45,7 +45,7 @@ export const Details = styled.div`
 `;
 
 export const Description = styled.p`
-  font-size: 16px;
+  font-size: 20px;
   color: ${secondaryTextColor};
   @media (min-width: ${breakpoints.tablet}) {
     overflow: hidden;
@@ -63,3 +63,7 @@ export const Genre = styled.p`
   background-color: ${backgroundColor};
   float: right;
 `;
+// export const Genre= styled.p:hover`
+//   color: red;
+//   backroundColor: red;
+// `

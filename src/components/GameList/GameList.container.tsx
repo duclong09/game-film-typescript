@@ -10,13 +10,19 @@ export const GameListContainer = () => {
   });
   const { games, error } = useFetch(filter);
 
-  const onFilterChange = useCallback((e: ChangeEvent<HTMLFormElement>) => {
-    setFilter((current) => ({
-      ...current,
-      [e.target.name]: e.target.value,
-    }));
-    e.preventDefault();
-  }, []);
+  const onFilterChange = useCallback(
+    (event: ChangeEvent<HTMLFormElement>) => {
+      setFilter((prev) => ({
+        // ...current,
+        // [e.target.name]: e.target.value,
+
+        ...prev,
+        [event.target.name]: event.target.value,
+      }));
+      event.preventDefault();
+    },
+    [games]
+  );
 
   return (
     <div>
